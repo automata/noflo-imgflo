@@ -1,0 +1,29 @@
+{
+  "name": "noflo-imgflo",
+  "description": "Components for imgflo.",
+  "author": "Vilson Vieira <vilson@void.cc>",
+  "repo": "vilson/noflo-imgflo",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "scripts": [
+    "index.js",
+    "components/DoSomething.coffee",
+    "components/foo.coffee"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "loader": "src/ComponentLoader.coffee",
+    "components": {
+      "DoSomething": "components/DoSomething.coffee",
+      "foo": "components/foo.coffee"
+    }
+  }
+}
