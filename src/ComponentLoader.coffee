@@ -1,12 +1,7 @@
 request = require 'request'
 noflo = require 'noflo'
 imgflo = require 'imgflo-url'
-
-# FIXME: Handle more gracefully
-config =
-  server: 'https://imgflo.herokuapp.com/'
-  key: process.env.IMGFLO_KEY
-  secret: process.env.IMGFLO_SECRET
+config = require('./config').config
 
 exports.getComponentForGraph = (graphName, graph) ->
   return (metadata) ->
@@ -45,7 +40,6 @@ getGraphsList = (callback) ->
     callback JSON.parse(body).graphs
 
 module.exports = (loader, done) ->
-  # For each ImgFlo graph
   getGraphsList (graphs) ->
     for name, def of graphs
       bound = exports.getComponentForGraph name, def
