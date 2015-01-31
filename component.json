@@ -12,18 +12,12 @@
     "https://raw.githubusercontent.com"
   ],
   "scripts": [
-    "index.js",
-    "components/DoSomething.coffee",
-    "components/foo.coffee"
+    "index.js"
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
-    "loader": "src/ComponentLoader.coffee",
-    "components": {
-      "DoSomething": "components/DoSomething.coffee",
-      "foo": "components/foo.coffee"
-    }
+    "loader": "src/ComponentLoader.coffee"
   }
 }

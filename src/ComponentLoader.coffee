@@ -25,8 +25,8 @@ exports.getComponentForGraph = (graphName, graph) ->
     noflo.helpers.WirePattern c,
       in: 'input'
       out: 'output'
-      params: paramPorts
       forwardGroups: true
+      params: paramPorts
     , (data, groups, out) ->
       params = JSON.parse JSON.stringify c.params
       params.input = data
