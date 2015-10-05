@@ -1,7 +1,7 @@
 {
   "name": "noflo-imgflo",
   "description": "Components for imgflo.",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": {
     "name": "Vilson Vieira",
     "email": "vilson@void.cc",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com//automata/noflo-imgflo.git"
+    "url": "git://github.com/noflo/noflo-imgflo.git"
   },
   "licenses": [
     {

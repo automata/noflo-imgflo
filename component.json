@@ -2,8 +2,8 @@
   "name": "noflo-imgflo",
   "description": "Components for imgflo.",
   "author": "Vilson Vieira <vilson@void.cc>",
-  "repo": "vilson/noflo-imgflo",
-  "version": "0.0.2",
+  "repo": "noflo/noflo-imgflo",
+  "version": "0.1.0",
   "keywords": [],
   "dependencies": {
     "noflo/noflo": "*"
