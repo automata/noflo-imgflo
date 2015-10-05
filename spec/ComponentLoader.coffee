@@ -8,6 +8,11 @@ else
 
 baseDir = '../src/ComponentLoader'
 
+config =
+    key: 'key'
+    secret: 'secret'
+    server: 'https://imgflo.herokuapp.com/'
+
 describe 'ComponentLoader', ->
 
   it 'should export a function', ->
@@ -22,7 +27,7 @@ describe 'ComponentLoader', ->
       @timeout 5000
       loader.listComponents () ->
         # Initialized
-        ComponentLoader loader, (err) ->
+        ComponentLoader loader, config, (err) ->
           loader.listComponents (components) ->
             chai.expect(components[imgfloGraph]?).to.be.true
             done()
