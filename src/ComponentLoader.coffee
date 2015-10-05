@@ -1,9 +1,9 @@
 request = require 'request'
 noflo = require 'noflo'
 imgflo = require 'imgflo-url'
-config = require('./config').config
+defaultConfig = require('./config').config
 
-exports.getComponentForGraph = (graphName, graph) ->
+getComponentForGraph = (config, graphName, graph) ->
   return (metadata) ->
     c = new noflo.Component
     paramPorts = []
@@ -29,7 +29,7 @@ exports.getComponentForGraph = (graphName, graph) ->
 
     return c
 
-getGraphsList = (callback) ->
+getGraphsList = (config, callback) ->
   server = config.server
   url = "#{server}demo"
   req = request
@@ -39,9 +39,12 @@ getGraphsList = (callback) ->
   request.get url, (err, resp, body) ->
     callback JSON.parse(body).graphs
 
-module.exports = (loader, done) ->
-  getGraphsList (graphs) ->
+module.exports = (loader, config, done) ->
+  if typeof config == 'function'
+    done = config
+    config = defaultConfig
+  getGraphsList config, (graphs) ->
     for name, def of graphs
-      bound = exports.getComponentForGraph name, def
+      bound = getComponentForGraph config, name, def
       loader.registerComponent 'imgflo', name, bound
     do done
