@@ -12,12 +12,16 @@
     "https://raw.githubusercontent.com"
   ],
   "scripts": [
-    "index.js"
+    "index.js",
+    "components/PreheatImages.coffee"
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
-    "loader": "src/ComponentLoader.coffee"
+    "loader": "src/ComponentLoader.coffee",
+    "components": {
+      "PreheatImages": "components/PreheatImages.coffee"
+    }
   }
 }

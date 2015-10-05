@@ -21,11 +21,12 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "noflo": "~0.5.0",
-    "imgflo-url": "~0.3.0",
-    "request": "~2.51.0",
     "MD5": "~1.2.1",
-    "query-string": "~1.0.0"
+    "imgflo-url": "~0.3.0",
+    "noflo": "~0.5.0",
+    "query-string": "~1.0.0",
+    "request": "~2.51.0",
+    "superagent": "^1.4.0"
   },
   "devDependencies": {
     "chai": "~3.3.0",
@@ -43,6 +44,9 @@
   "keywords": [],
   "noflo": {
     "loader": "src/ComponentLoader.coffee",
-    "icon": "picture-o"
+    "icon": "picture-o",
+    "components": {
+      "PreheatImages": "components/PreheatImages.coffee"
+    }
   }
 }
