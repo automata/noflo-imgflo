@@ -42,7 +42,6 @@
   },
   "keywords": [],
   "noflo": {
-    "loader": "src/ComponentLoader.coffee",
     "icon": "picture-o",
     "components": {
       "PreheatImages": "components/PreheatImages.coffee"

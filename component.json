@@ -19,7 +19,6 @@
     "component.json"
   ],
   "noflo": {
-    "loader": "src/ComponentLoader.coffee",
     "components": {
       "PreheatImages": "components/PreheatImages.coffee"
     }
