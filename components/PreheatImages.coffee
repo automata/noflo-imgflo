@@ -10,7 +10,6 @@ preheat = (images, cached, callback) ->
   req = superagent.post image
   req.redirects 0
   req.end (err, res) ->
-    return callback err if err
     # err is ignored, since Superagent considers 301 an error...
     location = res?.header?.location
     unless location
