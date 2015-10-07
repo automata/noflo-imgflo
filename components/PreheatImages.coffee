@@ -11,7 +11,7 @@ preheat = (images, cached, callback) ->
   req.redirects 0
   req.end (err, res) ->
     # err is ignored, since Superagent considers 301 an error...
-    location = res.header.location
+    location = res?.header?.location
     unless location
       return callback new Error "ImgFlo request #{image} resulted in #{res.statusCode} instead of location"
 
