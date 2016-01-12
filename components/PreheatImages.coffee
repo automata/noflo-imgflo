@@ -13,7 +13,10 @@ preheat = (images, cached, callback) ->
     # err is ignored, since Superagent considers 301 an error...
     location = res?.header?.location
     unless location
-      return callback new Error "ImgFlo request #{image} resulted in #{res.statusCode} instead of location"
+      if res?.statusCode
+        return callback new Error "ImgFlo request #{image} resulted in #{res.statusCode} instead of location"
+      return callback err if err
+      return callback new Error "ImgFlo request #{image} resulted in no response"
 
     cached.push location
     preheat images, cached, callback
