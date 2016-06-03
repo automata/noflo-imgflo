@@ -1,13 +1,5 @@
 language: node_js
 node_js:
-- 0.1
+- '4.2'
 before_script:
 - npm install -g grunt-cli
-deploy:
-  provider: npm
-  email: jononor@gmail.com
-  api_key:
-    secure: cGOkuNfI8bsw9jGmnmV+JmlX7G/B8mfs3TU0S9ZFxYlzf5E/M5cf+Z8sHB3JdsyraoGMnWHfKAK7ce6JPzBHoQCeKFA/TmjRMgv483TrUIbjWkh0+yptNMHhD4YWw4vE3b6yT5g7VBDqswifzQBAcxiHGpHzrYS7St6Et0kxGJA=
-  on:
-    tags: true
-    repo: noflo/noflo-imgflo
