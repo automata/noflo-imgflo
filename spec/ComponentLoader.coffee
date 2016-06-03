@@ -4,7 +4,7 @@ unless noflo.isBrowser()
   chai = require 'chai' unless chai
   ComponentLoader = require '../src/ComponentLoader'
 else
-  ComponentLoader = require 'noflo-runtime/src/ComponentLoader'
+  ComponentLoader = require 'noflo-imgflo/src/ComponentLoader'
 
 baseDir = '../src/ComponentLoader'
 
