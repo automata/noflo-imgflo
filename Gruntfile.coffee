@@ -46,12 +46,14 @@ module.exports = ->
         src: ['spec/*.coffee']
         options:
           reporter: 'spec'
+          grep: process.env.TESTS
 
     # BDD tests on browser
     mocha_phantomjs:
       options:
         output: 'spec/result.xml'
         reporter: 'spec'
+        failWithOutput: true
       all: ['spec/runner.html']
 
     # Coding standards
