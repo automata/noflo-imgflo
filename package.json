@@ -20,7 +20,7 @@
     "noflo": "0.x >= 0.5",
     "query-string": "~4.2.0",
     "request": "~2.72.0",
-    "superagent": "^1.4.0"
+    "superagent": "^2.0.0"
   },
   "devDependencies": {
     "chai": "~3.5.0",
@@ -31,7 +31,9 @@
     "grunt-noflo-manifest": "~0.1.11",
     "mocha": "~2.5.3"
   },
-  "keywords": ["noflo"],
+  "keywords": [
+    "noflo"
+  ],
   "noflo": {
     "icon": "picture-o",
     "components": {
