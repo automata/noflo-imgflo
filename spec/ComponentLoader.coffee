@@ -25,10 +25,12 @@ describe 'ComponentLoader', ->
 
     it 'should list imgflo graphs as components', (done) ->
       @timeout 5000
-      loader.listComponents () ->
+      loader.listComponents (err) ->
+        return done err if err
         # Initialized
         ComponentLoader loader, config, (err) ->
-          loader.listComponents (components) ->
+          loader.listComponents (err, components) ->
+            return done err if err
             chai.expect(components[imgfloGraph]?).to.be.true
             done()
 
