@@ -3,3 +3,11 @@ node_js:
 - '4.2'
 before_script:
 - npm install -g grunt-cli
+deploy:
+  provider: npm
+  email: henri.bergius@iki.fi
+  api_key:
+    secure: W87SeNmgBburZ9AtyEX0NgLxGH8QdLFUNUALO5lqzXM6trn4YlrR/wMdxg9MDOz1FPWcZuJyHXkaBqPfee0j9b2bYYnLSgocVyr3kNDaTyXzsGj4qNKnqkSowHCidlVVT8if7/JLQfg/JgvvTJcS0P0BcSvVL35HTE2tY4i54XY=
+  on:
+    tags: true
+    repo: noflo/noflo-imgflo
