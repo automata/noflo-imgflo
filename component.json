@@ -3,7 +3,7 @@
   "description": "Components for imgflo.",
   "author": "Vilson Vieira <vilson@void.cc>",
   "repo": "noflo/noflo-imgflo",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "keywords": [],
   "dependencies": {
     "noflo/noflo": "*"
