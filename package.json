@@ -23,13 +23,13 @@
     "superagent": "^1.4.0"
   },
   "devDependencies": {
-    "chai": "~3.5.0",
-    "grunt": "~1.0.1",
-    "grunt-coffeelint": "~0.0.10",
-    "grunt-contrib-watch": "~1.0.0",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-coffeelint": "^0.0.16",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-mocha-test": "^0.13.2",
-    "grunt-noflo-manifest": "~0.1.12",
-    "mocha": "~2.5.3"
+    "grunt-noflo-manifest": "^0.1.12",
+    "mocha": "^2.5.3"
   },
   "keywords": [
     "noflo"
