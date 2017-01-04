@@ -38,13 +38,14 @@ getGraphsList = (config, callback) ->
 
   request.get url, (err, resp, body) ->
     return callback err if err
-    callback JSON.parse(body).graphs
+    callback null, JSON.parse(body).graphs
 
 module.exports = (loader, config, done) ->
   if typeof config == 'function'
     done = config
     config = defaultConfig
-  getGraphsList config, (graphs) ->
+  getGraphsList config, (err, graphs) ->
+    return done err if err
     for name, def of graphs
       bound = getComponentForGraph config, name, def
       loader.registerComponent 'imgflo', name, bound
