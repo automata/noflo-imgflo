@@ -31,12 +31,13 @@ getComponentForGraph = (config, graphName, graph) ->
 
 getGraphsList = (config, callback) ->
   server = config.server
-  url = "#{server}demo"
+  url = "#{server}graphs"
   req = request
     url: url
     timeout: 10000
 
   request.get url, (err, resp, body) ->
+    return callback err if err
     callback JSON.parse(body).graphs
 
 module.exports = (loader, config, done) ->
