@@ -16,7 +16,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "imgflo-url": "~1.1.0",
+    "imgflo-url": "~1.2.0",
     "noflo": "0.x >= 0.5",
     "query-string": "~4.2.3",
     "request": "~2.79.0",
