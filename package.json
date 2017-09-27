@@ -19,7 +19,7 @@
     "imgflo-url": "~1.2.0",
     "noflo": "0.x >= 0.5",
     "query-string": "~5.0.0",
-    "request": "~2.82.0",
+    "request": "~2.83.0",
     "superagent": "~3.6.0"
   },
   "devDependencies": {
