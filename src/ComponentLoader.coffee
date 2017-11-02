@@ -22,10 +22,12 @@ getComponentForGraph = (config, graphName, graph) ->
       out: 'output'
       forwardGroups: true
       params: paramPorts
-    , (data, groups, out) ->
+      async: true
+    , (data, groups, out, callback) ->
       params = JSON.parse JSON.stringify c.params
       params.input = data
       out.send imgflo config, graphName, params, 'png'
+      do callback
 
     return c
 
