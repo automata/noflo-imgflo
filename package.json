@@ -19,7 +19,7 @@
   "dependencies": {
     "imgflo-url": "~1.2.0",
     "noflo": "^1.0.0",
-    "query-string": "~5.0.0",
+    "query-string": "~5.1.0",
     "request": "~2.83.0",
     "superagent": "~3.8.0"
   },
